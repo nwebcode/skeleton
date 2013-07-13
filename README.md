@@ -1,0 +1,4 @@
+skeleton
+========
+
+Nweb Skeleton Application
