@@ -1,0 +1,27 @@
+{
+    "name": "nweb/skeleton",
+    "description": "Skeleton Application for Nweb Framework",
+    "keywords": ["nweb", "skeleton"],
+    "homepage": "https://github.com/nwebcode/skeleton",
+    "type": "project",
+    "license": "LGPL-3.0+",
+    "authors": [
+        {
+            "name": "Krzysztof Kardasz",
+            "email": "krzysztof@kardasz.eu",
+            "homepage": "http://kardasz.eu"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "nweb/framework": "dev-master",
+        "nweb/image": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "App\\": "app/",
+            "Src\\": "src/",
+            "Nweb\\Image\\": "src/"
+        }
+    }
+}
