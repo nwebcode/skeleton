@@ -6,8 +6,18 @@ class Index extends \Nweb\Framework\Application\Controller {
 
     public function helloAction()
     {
-        return new Nweb\Framework\View(array(
-            'hello' => 'Hello World'
-        ));
+        $this->getHttpRequest();
+        $this->getHttpResponse();
+
+
+
+
+
+
+        return new Nweb\Framework\View(
+            array(
+                'hello' => 'Hello World'
+            )
+        );
     }
 }
