@@ -9,10 +9,22 @@ class Module extends \Nweb\Framework\Application\Module {
         // $eventManager = $this->getEventManager();
         // $eventManager->on(\Nweb\Framework\Application\EventManager::)
 
-        $router = $this->getResource('\Nweb\Framework\Application\Router');
-        $router->addRoute('/', array(
-            'controller' => '\\Appp\\Example\\Controller\\Index',
-            'action'     => 'hello'
-        ));
+        $router = $this->getService('Router');
+        //$router->setResource('Router', new Router());
+        
+        
+        $router->addRoute('/', function (Application $app) {
+            return 
+                (new App\Example\Controller\Index())
+                ->setAppliction($app)
+                ->helloAction();
+        });
+        
+        $router->addRoute('/', function (Application $app) {
+            return
+            (new Nweb\Framework\Application\Response())
+            ->setAppliction($app)
+            ->helloAction();
+        });
     }
 }
