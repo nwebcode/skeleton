@@ -19,9 +19,9 @@
     },
     "autoload": {
         "psr-0": {
-            "App\\": "app/",
-            "Src\\": "src/",
-            "Nweb\\Image\\": "src/"
+            "App\\": "src/",
+            "Std\\": "src/",
+            "Plugin\\": "src/"
         }
     }
 }
